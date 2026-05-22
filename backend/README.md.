@@ -1,0 +1,37 @@
+# 🛡️ DNIF Matrix-AI: Automated Support Plane
+
+A localized, privacy-first Security Operations Center (SOC) Co-Pilot designed to automate context-aware client engagement responses for Jira tickets. This tool leverages an offline Mistral LLM to generate highly professional, template-driven responses without sending sensitive customer logs to external cloud APIs.
+
+## ✨ Core Features
+* **Offline AI Inference:** Runs entirely locally using Ollama and the Mistral 7B model, ensuring strict data privacy for security logs.
+* **Real-Time Streaming:** Streams the LLM output directly to the UI using a custom FastAPI backend.
+* **Prompt Template Architecture:** Configurable framing weights to adjust the tone and structure based on ticket classification (Case, Service Request, Feature Request).
+* **Enterprise SOC Dashboard:** A premium, dark-mode cybersecurity user interface built with React and Tailwind CSS v4.
+
+## 🛠️ Technology Stack
+* **Frontend:** React, Vite, Tailwind CSS v4, Lucide Icons
+* **Backend:** Python, FastAPI, Uvicorn, httpx
+* **AI Engine:** Ollama (Local AI Runtime), Mistral-7B-Instruct
+
+## 🚀 How to Run the Application
+You will need three separate terminal instances running concurrently in your root directory to power the three layers of the application.
+
+**Terminal 1: Start the AI Engine**
+Keep the local AI server running in the background.
+```bash
+./bin/ollama serve
+
+Terminal 2: Start the Python Backend
+Activate the virtual environment and boot the FastAPI connector.
+
+Bash
+cd backend
+source venv/bin/activate
+uvicorn main:app --reload --port 8000
+Terminal 3: Start the UI Dashboard
+Launch the React frontend development server.
+
+Bash
+cd frontend
+npm run dev
+Access the application at: http://localhost:5173

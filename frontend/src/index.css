@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
+
+/* High-tech background enhancement */
+body {
+  background-color: #0b0f19;
+  color: #f8fafc;
+}

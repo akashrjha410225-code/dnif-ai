@@ -1,0 +1,23 @@
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+.vite/
+
+# Database
+backend/database.db
+
+# Large binaries
+bin/
+lib/
+ollama/
+*.tar.zst
+*.so
+
+# OS
+.DS_Store
+Thumbs.db
